@@ -19,8 +19,7 @@ for i=1:n
     [m,j] = max(abs(x0));
     
     % Scale vector so that the element of maximum absolute value is 1
-    x0 = x0/x0(j); 
-    
+    x0 = x0/x0(j) ;
     x(:,i) = x0;         % Store eigenvector approximation (new column)
     x0 = A*x0;           % Do power iteration, overwriting previous 
     lambda(1,i) = x0(j); % Store eigenvalue approximation (new column)
